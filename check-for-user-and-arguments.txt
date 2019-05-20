@@ -1,0 +1,12 @@
+
+# Bash check for sudo
+if [ "$EUID" -ne 0 ]
+  then echo "Please run as root"
+  exit
+fi
+
+# Bash check # of arguments
+if [ "$#" -ne 1 ]; then
+    echo "Illegal number of parameters"
+fi
+
